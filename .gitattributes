@@ -1,0 +1,4 @@
+airootfs/usr/share/backgrounds/acreetion2.png filter=lfs diff=lfs merge=lfs -text
+/airootfs/usr/share/backgrounds/acreetion-xl.png filter=lfs diff=lfs merge=lfs -text
+/airootfs/usr/share/backgrounds/acreetion.png filter=lfs diff=lfs merge=lfs -text
+/airootfs/usr/share/backgrounds/acreetion2.png filter=lfs diff=lfs merge=lfs -text
