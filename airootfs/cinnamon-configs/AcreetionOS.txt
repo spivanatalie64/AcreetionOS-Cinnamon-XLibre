@@ -1,4 +1,5 @@
--.                     
+                                            
+                     -.                     
                    =#%*=                    
                  :#%#*+**-                  
                 +%#=----=+=                 
@@ -18,41 +19,9 @@
                                            
 
 
-  Acreetion OS
-  
-  (XLibre Edition)
+    _                      _   _              ___  ____
+   / \   ___ _ __ ___  ___| |_(_) ___  _ __  / _ \/ ___|
+  /` _\ / __| '__/ _ \/ _ \ __| |/ _ \| '_ \| | | \___ \
+ / ___ \ (__| | |  __/  __/ |_| | (_) | | | | |_| |___) |
+/_/   \_\___|_|  \___|\___|\__|_|\___/|_| |_|\___/|____/
 
-   _                      _   _              ___  ____        __  __
-  / \   ___ _ __ ___  ___| |_(_) ___  _ __  / _ \/ ___|      \ \/ /
- / _ \ / __| '__/ _ \/ _ \ __| |/ _ \| '_ \| | | \___ \       \  / 
-/ ___ \ (__| | |  __/  __/ |_| | (_) | | | | |_| |___) |      /  \ 
-/_/   \_\___|_|  \___|\___|\__|_|\___/|_| |_|\___/|____/      /_/\_\
-                                                                    
-                                                                    
-    _     ___ ____  ____  _____ 
-   | |   |_ _| __ )|  _ \| ____|
-   | |    | ||  _ \| |_) |  _|  
-   | |___ | || |_) |  _ <| |___ 
-   |_____|___|____/|_| \_\_____|
-                                
-
-What is XLibre?
-XLibre is a modernized fork of X11/X.Org, providing a more stable 
-and actively maintained display server for those who prefer the 
-reliability of X11 over Wayland.
-
-Cinnamon Integration & Updates:
-We have custom-patched Cinnamon to integrate with XLibre. 
-As a small team, maintaining an entire desktop environment is 
-not practical; patching allows us to revolutionize the 
-experience while staying lean. We are currently porting to 
-XLibre for this version.
-
-We also have a new developer giving Wayland a try for future 
-versions, but we will see what comes of that exploration.
-
-To maintain system stability, DO NOT manually update Cinnamon 
-packages (cinnamon, muffin, nemo, etc.). Standard upstream 
-updates may break the XLibre integration. We will handle 
-Cinnamon updates ourselves. Future updates will use a 
-custom-named package: cinnamon-acreetionos.

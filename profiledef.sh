@@ -3,8 +3,8 @@
 
 iso_name="AcreetionOS_XL"
 iso_label="AcreetionOS_XL_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="Acreetion OS Project"
-iso_application="AcreetionOS XL Install Media"
+iso_publisher="Acreetion OS"
+iso_application="Acreetion OS XLibre Install Media"
 iso_version="1.0"
 install_dir="arch"
 buildmodes=('iso')
@@ -36,5 +36,4 @@ file_permissions=(
   ["/usr/local/bin/stormos-final"]="0:0:755"
   ["/usr/bin/wifi-connection"]="0:0:755"
   ["/usr/local/bin/setup-displays.sh"]="0:0:755"
-  ["/usr/bin/acreetionos-welcome.sh"]="0:0:755"
 )

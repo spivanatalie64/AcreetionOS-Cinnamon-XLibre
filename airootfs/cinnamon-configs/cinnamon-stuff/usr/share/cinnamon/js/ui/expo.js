@@ -39,7 +39,7 @@ Expo.prototype = {
         // scenes which allows us to show the background with different
         // rendering options without duplicating the texture data.
         if (!Meta.is_wayland_compositor()) {
-            this._background = Meta.XLibreBackgroundActor.new_for_display(global.display);
+            this._background = Meta.X11BackgroundActor.new_for_display(global.display);
         } else {
             this._background = new Clutter.Actor();
         }

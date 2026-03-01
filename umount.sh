@@ -1,9 +1,9 @@
 #!/bin/bash
-# AcreetionOS-XLibre Build Cleanup Script
+# AcreetionOS Build Cleanup Script
 
 WORK_DIR="work/x86_64/airootfs"
 
-echo "--- Starting AcreetionOS-XLibre Cleanup ---"
+echo "--- Starting AcreetionOS Cleanup ---"
 
 # 1. Unmount virtual filesystems in reverse order
 # We use -l (lazy) to detach them even if they are 'busy'

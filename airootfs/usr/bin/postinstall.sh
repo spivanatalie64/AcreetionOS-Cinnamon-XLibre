@@ -14,7 +14,7 @@
 #
 ##############################################################################
 
-echo "Starting Acreetion OS post-installation configuration..."
+echo "Starting AcreetionOS post-installation configuration..."
 
 name=$(ls -1 /home)
 echo "Configuring system for user: $name"
@@ -46,7 +46,7 @@ mv /resolv.conf /etc/resolv.conf
 chattr +i /etc/resolv.conf
 chattr +i /etc/os-release
 
-echo "Copying Acreetion OS documentation..."
+echo "Copying AcreetionOS documentation..."
 cp /cinnamon-configs/AcreetionOS.txt /home/$name/
 
 echo "Setting up system backgrounds..."
@@ -75,4 +75,4 @@ echo "Cleaning up temporary files..."
 rm -rf /mkinitcpio
 rm -rf cinnamon-configs
 
-echo "Acreetion OS post-installation configuration completed successfully!"
+echo "AcreetionOS post-installation configuration completed successfully!"

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AcreetionOS-XLibre is an Arch Linux-based distribution that creates bootable ISO images using the archiso framework. The project builds a live Linux distribution with Cinnamon desktop environment, targeting x86_64 architecture with custom configurations and packages.
+AcreetionOS is an Arch Linux-based distribution that creates bootable ISO images using the archiso framework. The project builds a live Linux distribution with Cinnamon desktop environment, targeting x86_64 architecture with custom configurations and packages.
 
 ## Build Commands
 
@@ -15,7 +15,7 @@ AcreetionOS-XLibre is an Arch Linux-based distribution that creates bootable ISO
 
 ### Build Process Details
 1. `refresh.sh` removes previous build artifacts (work/, out/)
-2. `mkarchiso.sh` calls the archiso build system with AcreetionOS-XLibre label
+2. `mkarchiso.sh` calls the archiso build system with AcreetionOS label
 3. Final ISO is output to `../ISO/` directory
 4. Build uses custom `pacman.conf` for package management
 

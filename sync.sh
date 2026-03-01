@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==========================================================
-# AcreetionOS-XLibre Git Mirror Sync Script
+# AcreetionOS Git Mirror Sync Script
 # Mirrors source repo → destination repo via SSH
 # Author: Natalie
 # ==========================================================
@@ -8,9 +8,9 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 
 # --- Configuration ---
-SOURCE_REPO="git@github.com:cobra3282000/xlibreos.git"
-DEST_REPO="git@github.com:AcreetionOS-XLibre-Linux/xlibreos.git"
-WORKDIR="$HOME/Projects/xlibreos"
+SOURCE_REPO="git@github.com:cobra3282000/acreetionos.git"
+DEST_REPO="git@github.com:AcreetionOS-Linux/acreetionos.git"
+WORKDIR="$HOME/Projects/acreetionos"
 
 # --- Functions ---
 log() {
@@ -23,7 +23,7 @@ error() {
 }
 
 # --- Start ---
-log "Starting AcreetionOS-XLibre repository mirror process..."
+log "Starting AcreetionOS repository mirror process..."
 
 # Clean up old working directory if it exists
 if [ -d "$WORKDIR" ]; then

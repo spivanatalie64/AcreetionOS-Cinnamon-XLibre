@@ -137,7 +137,7 @@ def createSystemInfos():
     for card in cards:
         infos.append((_("Graphics Card"), cards[card]))
 
-    display_server_name = _("AcreetionOS-XLibre")
+    display_server_name = _("X11")
 
     if util.get_session_type() == "wayland":
         display_server_name = _("Wayland")

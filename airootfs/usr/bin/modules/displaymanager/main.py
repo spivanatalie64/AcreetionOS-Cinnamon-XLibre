@@ -91,11 +91,11 @@ class DesktopEnvironment:
     def find_desktop_file(self, root_mount_point):
         """
         Returns the full path of the .desktop file within @p root_mount_point,
-        or None if it isn't found.  Searches both XLibre and Wayland sessions.
+        or None if it isn't found.  Searches both X11 and Wayland sessions.
         """
-        xlibre_sessions = "{!s}/usr/share/xlibresessions/{!s}.desktop".format(root_mount_point, self.desktop_file)
+        x11_sessions = "{!s}/usr/share/xsessions/{!s}.desktop".format(root_mount_point, self.desktop_file)
         wayland_sessions = "{!s}/usr/share/wayland-sessions/{!s}.desktop".format(root_mount_point, self.desktop_file)
-        for candidate in (xlibre_sessions, wayland_sessions):
+        for candidate in (x11_sessions, wayland_sessions):
             if os.path.exists(candidate):
                 return candidate
         return None
@@ -163,7 +163,7 @@ class DesktopEnvironment:
 # /usr/local/bin) then the DE is assumed to be installed
 # and to use that .desktop filename.
 desktop_environments = [
-    DesktopEnvironment('/usr/bin/startplasma-xlibre', 'plasma'),  # KDE Plasma 5.17+
+    DesktopEnvironment('/usr/bin/startplasma-x11', 'plasma'),  # KDE Plasma 5.17+
     DesktopEnvironment('/usr/bin/startkde', 'plasma'),  # KDE Plasma 5
     DesktopEnvironment('/usr/bin/startkde', 'kde-plasma'),  # KDE Plasma 4
     DesktopEnvironment(

@@ -256,7 +256,7 @@ Overview.prototype = {
 
         let desktopBackground;
         if (!Meta.is_wayland_compositor()) {
-            desktopBackground = Meta.XLibreBackgroundActor.new_for_display(global.display);
+            desktopBackground = Meta.X11BackgroundActor.new_for_display(global.display);
         } else {
             desktopBackground = new Clutter.Actor();
         }

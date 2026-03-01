@@ -11,7 +11,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('XApp', '1.0')
 
-from gi.repository import GLib, Gtk, GdkXLibre, Gdk, XApp
+from gi.repository import GLib, Gtk, GdkX11, Gdk, XApp
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
@@ -71,7 +71,7 @@ class CloseDialog(XApp.GtkWindow):
         self.realize()
 
         try:
-            parent = GdkXLibre.XLibreWindow.foreign_new_for_display(Gdk.Display.get_default(), parent_xid)
+            parent = GdkX11.X11Window.foreign_new_for_display(Gdk.Display.get_default(), parent_xid)
             self.get_window().set_transient_for(parent)
         except TypeError:
             parent = None

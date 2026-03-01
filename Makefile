@@ -32,7 +32,7 @@ uninstall:
 	@echo -e "\033[1;32m[SUCCESS]\033[0m ✓ Uninstall complete!"
 
 help:
-	@echo -e "\033[1;35mAcreetionOS-XLibre mkarchiso Wrapper - Build System\033[0m"
+	@echo -e "\033[1;35mAcreetionOS mkarchiso Wrapper - Build System\033[0m"
 	@echo ""
 	@echo -e "\033[1;36mTargets:\033[0m"
 	@echo "  all       - Build the mkarchiso wrapper (default)"

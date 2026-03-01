@@ -743,7 +743,7 @@ class Module:
         # window (self.window)
         button_x, button_y = widget.get_allocation().x, widget.get_allocation().y
 
-        # now convert them to XLibre-relative
+        # now convert them to X11-relative
         unused_var, window_x, window_y = widget.get_window().get_origin()
         x = window_x + button_x
         y = window_y + button_y

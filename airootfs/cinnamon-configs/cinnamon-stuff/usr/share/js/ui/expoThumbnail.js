@@ -391,7 +391,7 @@ ExpoWorkspaceThumbnail.prototype = {
         this.contents.add_actor(this.background);
 
         if (!Meta.is_wayland_compositor()) {
-            let desktopBackground = Meta.XLibreBackgroundActor.new_for_display(global.display);
+            let desktopBackground = Meta.X11BackgroundActor.new_for_display(global.display);
             this.background.add_actor(desktopBackground);
         }
 

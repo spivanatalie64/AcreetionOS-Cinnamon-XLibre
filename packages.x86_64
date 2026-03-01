@@ -1,5 +1,5 @@
 ################################################################################
-# AcreetionOS-XLibre Package List v1.0
+# AcreetionOS Package List v2.0
 # Optimized for minimal ISO size while maintaining full functionality
 ################################################################################
 
@@ -69,6 +69,7 @@ dhcpcd
 dhclient
 iw
 iwd
+wpa_supplicant
 wireless-regdb
 wireless_tools
 openssh
@@ -86,7 +87,8 @@ sof-firmware
 ################################################################################
 # DISPLAY SERVER & GRAPHICS
 ################################################################################
-xlibre
+xlibre-xserver
+xlibre-xserver-common
 mesa
 mesa-utils
 glu
@@ -112,10 +114,13 @@ lightdm-gtk-greeter
 ################################################################################
 # CINNAMON DESKTOP ENVIRONMENT
 ################################################################################
+cinnamon
 cinnamon-control-center
 cinnamon-desktop
 cinnamon-menus
+cinnamon-session
 cinnamon-settings-daemon
+cinnamon-screensaver
 cinnamon-translations
 cjs
 muffin
@@ -123,13 +128,6 @@ nemo
 gnome-terminal
 gnome-keyring
 gnome-themes-extra
-xapp
-python-dbus
-python-gobject
-python-pillow
-python-pyinotify
-python-setproctitle
-python-xapp
 
 ################################################################################
 # DESKTOP INTEGRATION & PORTALS
@@ -160,6 +158,7 @@ kcrash
 # CALAMARES INSTALLER - System installer and dependencies
 ################################################################################
 calamares
+calamares-config
 kpmcore
 yaml-cpp
 libpwquality
@@ -167,7 +166,6 @@ libpwquality
 ################################################################################
 # SYSTEM UTILITIES
 ################################################################################
-zenity
 diffutils
 fakeroot
 nano
@@ -229,6 +227,7 @@ gnu-free-fonts
 ################################################################################
 # MISCELLANEOUS
 ################################################################################
+livecd-sounds
 mailcap
 mtools
 
@@ -259,6 +258,7 @@ intel-ucode
 # Package managers
 #yay-bin
 #libpamac-aur
+pamac-gtk3
 
 # Media players
 vlc
@@ -274,7 +274,7 @@ mate-icon-theme-faenza
 gedit
 
 # File managers
-#mc
+webapp-manager
 
 # Network sharing
 samba

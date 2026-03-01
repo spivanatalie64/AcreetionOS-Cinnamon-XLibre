@@ -380,7 +380,7 @@ LayoutManager.prototype = {
 
     _prepareStartupAnimation: function() {
         // During the initial transition, add a simple actor to block all events,
-        // so they don't get delivered to XLibre windows that have been transformed.
+        // so they don't get delivered to X11 windows that have been transformed.
         this._coverPane = new Clutter.Actor({ opacity: 0,
                                               width: global.screen_width,
                                               height: global.screen_height,

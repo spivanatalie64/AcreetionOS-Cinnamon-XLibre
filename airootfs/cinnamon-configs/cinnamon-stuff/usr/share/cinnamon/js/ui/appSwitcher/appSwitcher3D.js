@@ -43,7 +43,7 @@ AppSwitcher3D.prototype = {
         this._lastTime = 0;
 
         if (!Meta.is_wayland_compositor()) {
-            this._background = Meta.XLibreBackgroundActor.new_for_display(global.display);
+            this._background = Meta.X11BackgroundActor.new_for_display(global.display);
         } else {
             this._background = new Clutter.Actor();
         }

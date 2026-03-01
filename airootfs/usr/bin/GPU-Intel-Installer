@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This app checks if an Intel graphics device in the system is of generation from 1 to 3.
-# If an old Intel device is detected, app installs the xlibre-video-intel package.
+# If an old Intel device is detected, app installs the xf86-video-intel package.
 # This app is meant to install the package into the ISO only.
 # Returns 0 (=true) if a match is found.
 # Returns 1 (=false) otherwise.
@@ -42,7 +42,7 @@ Main() {
     local id
     local item
     local intel_vid=8086
-    local pkg=xlibre-video-intel
+    local pkg=xf86-video-intel
 
     for item in ${input_items//|/ } ; do
         if [ -n "$(echo "$data" | grep -w "$item")" ] ; then

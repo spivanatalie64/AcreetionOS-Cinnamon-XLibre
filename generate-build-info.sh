@@ -10,4 +10,4 @@ BUILD_INFO="Commit: $GIT_COMMIT
 Date: $BUILD_DATE
 User: $GIT_USER"
 
-echo "$BUILD_INFO" > airootfs/etc/acreetionos-build
+echo "$BUILD_INFO" > airootfs/etc/acreetion-build

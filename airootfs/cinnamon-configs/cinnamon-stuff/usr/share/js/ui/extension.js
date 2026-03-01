@@ -23,7 +23,7 @@ var State = {
     LOADED: 1,
     ERROR: 2,
     OUT_OF_DATE: 3,
-    XLIBRE_ONLY: 4
+    X11_ONLY: 4
 };
 
 // Xlets using imports.gi.NMClient. This should be removed in Cinnamon 4.2+,
@@ -37,7 +37,7 @@ var knownCinnamon4Conflicts = [
     'netusage@30yavash.com'
 ];
 
-var xlibreOnly = [
+var x11Only = [
         "keyboard@cinnamon.org",
         "systray@cinnamon.org"
     ]
@@ -146,7 +146,7 @@ function logError(message, uuid, error, state) {
         error.message += `\n${errorMessage}`;
     }
 
-    if (state !== State.XLIBRE_ONLY) {
+    if (state !== State.X11_ONLY) {
         error.stack = error.stack.split('\n')
             .filter(function(line) {
                 return !line.match(/<Promise>|wrapPromise/);
@@ -297,7 +297,7 @@ Extension.prototype = {
              //   remove them or anything)
             Main.cinnamonDBusService.EmitXletAddedComplete(false, uuid);
 
-            if (e.cause == null || e.cause !== State.XLIBRE_ONLY) {
+            if (e.cause == null || e.cause !== State.X11_ONLY) {
                 Main.xlet_startup_error = true;
             }
             forgetExtension(uuid, type);
@@ -319,8 +319,8 @@ Extension.prototype = {
     },
     validateMetaData: function() {
         // Some properties are required to run
-        if (xlibreOnly.includes(this.meta.uuid) && Meta.is_wayland_compositor()) {
-            throw logError("Extension not compatible with Wayland", this.uuid, null, State.XLIBRE_ONLY);
+        if (x11Only.includes(this.meta.uuid) && Meta.is_wayland_compositor()) {
+            throw logError("Extension not compatible with Wayland", this.uuid, null, State.X11_ONLY);
         }
 
         this.checkProperties(Type[this.upperType].requiredProperties, true);
@@ -529,7 +529,7 @@ function getMetaStateString(state) {
             return _("Error");
         case State.OUT_OF_DATE:
             return _("Out of date");
-        case State.XLIBRE_ONLY:
+        case State.X11_ONLY:
             return _("Not compatible with Wayland");
     }
     return 'Unknown'; // Not translated, shouldn't appear

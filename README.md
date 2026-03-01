@@ -1,36 +1,36 @@
-# Acreetion OS
-# copyright 2026
-Welcome to Acreetion OS, an open-source project aimed at providing the user a stable and up-to-date experience using the XLibre display server.
+# AcreetionOS Linux Number 1
+# copyright 2025
+Welcome to AcreetionOS Linux, an open-source project aimed at providing the user a stable and up-to-date experience.
 
-Download ISO here: https://acreetionos.org/
+Download ISO here: https://acreetionos.org
 
 ## Project Overview
 
-Acreetion OS is a community-driven effort to build a lightweight, versatile Linux distribution based on Arch Linux, featuring the XLibre display server by default.
+AcreetionOS Linux is a community-driven effort to build a lightweight, versatile Linux distribution. AcreetionOS Linux is currently based on Arch Linux, but the future goal is to be a parallel* distribution with our own base. Our goal is to provide a solid foundation for both everyday users and developers, with a focus on simplicity, ease of use, and stability; all while keeping packages up to date.
 
 ## Features
 
 - Lightweight base system
-- XLibre display server
+- Standardized Package Selection
 - User-friendly installation process
 - x86_64 friendly.
 
 ## Getting Started
 
-To get started with Acreetion OS, you can:
+To get started with AcreetionOS Linux, you can:
 
-1. Download the latest ISO from our [Website](https://acreetionos.org/)!
+1. Download the latest ISO from our [Website](https://acreetionos.org)!
 2. Create a bootable USB drive using tools like [Etcher]("https://etcher.balena.io/#download-etcher"), [Rufus]("https://rufus.ie/en/"), or [Ventoy]("https://ventoy.net/en/index.html").
 3. Boot from the USB drive and follow the installation instructions
 
 *     Ventoy MUST use GRUB MODE 2, if you use grub by its self will not boot correctly if at all.*
 ## Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guide]("https://github.com/AcreetionOS-XLibre-Linux/AcreetionOS-XLibreDocumentationPlan/blob/main/documentation/contributor-guide.md") file for guidelines on how to get involved.
+We welcome contributions from the community! Please see our [Contributing Guide]("https://github.com/AcreetionOS/AcreetionOSDocumentationPlan/blob/main/documentation/contributor-guide.md") file for guidelines on how to get involved.
 
 ## Roadmap
 
-Our current goal is to release a stable distribution by the end of 2026. Check out our [project road map](https://github.com/AcreetionOS-XLibre-Linux/xlibreos/projects) for more details on upcoming features and milestones.
+Our current goal is to release a stable distribution by the end of 2026. Check out our [project road map](https://github.com/cobra3282000/acreetionos/projects) for more details on upcoming features and milestones.
 
 ## Project Information
 
@@ -41,9 +41,9 @@ Our current goal is to release a stable distribution by the end of 2026. Check o
 
 ## Contact
 
-For questions, suggestions, or support, please [open an issue](https://github.com/AcreetionOS-XLibre-Linux/xlibreos/issues) on our GitHub repository.
+For questions, suggestions, or support, please [open an issue](https://github.com/cobra3282000/acreetionos/issues) on our GitHub repository.
 
-Thank you for your interest in Acreetion OS!
+Thank you for your interest in AcreetionOS Linux!
 
 
 ## Definitions:

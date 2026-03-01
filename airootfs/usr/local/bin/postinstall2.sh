@@ -1,4 +1,4 @@
-# post script for Acreetion OS cinnamon edition
+# post script for  acreetion os cinnamon edition
 # written by: Darren Clift
 # copyright (C) 2025
 

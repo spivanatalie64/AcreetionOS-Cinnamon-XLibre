@@ -107,3 +107,4 @@ systemctl daemon-reload
 # rm /etc/xdg/autostart/calamares.desktop
 
 exit 0
+

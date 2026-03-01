@@ -3,7 +3,7 @@
 from SettingsWidgets import SidePage
 from xapp.GSettingsWidgets import *
 
-FRACTIONAL_ENABLE_OPTIONS = ["scale-monitor-framebuffer", "xlibre-randr-fractional-scaling"]
+FRACTIONAL_ENABLE_OPTIONS = ["scale-monitor-framebuffer", "x11-randr-fractional-scaling"]
 
 class Module:
     name = "display"
@@ -57,7 +57,7 @@ class Module:
             self.fractional_switch = switch.content_widget
 
             self.muffin_settings = Gio.Settings(schema_id="org.cinnamon.muffin")
-            self.experimental_features_changed(self.muffin_settings, "xlibre-randr-fractional-scaling")
+            self.experimental_features_changed(self.muffin_settings, "x11-randr-fractional-scaling")
             self.muffin_settings.connect("changed::experimental-features", self.experimental_features_changed)
             self.fractional_switch.connect("notify::active", self.fractional_switch_toggled)
 
