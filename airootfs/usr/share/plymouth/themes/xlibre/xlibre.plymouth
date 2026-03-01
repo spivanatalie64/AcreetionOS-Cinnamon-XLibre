@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=AcreetionOS-XLibre
+Description=AcreetionOS-XLibre Plymouth Theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/xlibre
+ScriptFile=/usr/share/plymouth/themes/xlibre/xlibre.script

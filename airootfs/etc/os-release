@@ -1,0 +1,10 @@
+NAME="Acreetion OS"
+PRETTY_NAME="Acreetion OS"
+ID=acreetionos
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://acreetionos.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://github.com/AcreetionOS-XLibre-Linux"
+BUG_REPORT_URL="https://github.com/AcreetionOS-XLibre-Linux/xlibreos/issues"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
