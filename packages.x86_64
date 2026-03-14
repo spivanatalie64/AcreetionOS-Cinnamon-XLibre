@@ -363,3 +363,5 @@ pv
 nbd
 #nfs-utils
 open-iscsi
+# auto logger
+autologger
