@@ -1,51 +1,90 @@
-# AcreetionOS Linux Number 1
-# copyright 2025
-Welcome to AcreetionOS Linux, an open-source project aimed at providing the user a stable and up-to-date experience.
+# AcreetionOS Cinnamon — XLibre Edition
 
-Download ISO here: https://acreetionos.org
+Welcome to the **XLibre edition** of AcreetionOS Linux with the Cinnamon desktop environment. This build replaces the X.Org Server with **XLibre**, an actively maintained fork of `xorg-server`.
 
-## Project Overview
+Download ISOs: <https://acreetionos.org>
 
-AcreetionOS Linux is a community-driven effort to build a lightweight, versatile Linux distribution. AcreetionOS Linux is currently based on Arch Linux, but the future goal is to be a parallel* distribution with our own base. Our goal is to provide a solid foundation for both everyday users and developers, with a focus on simplicity, ease of use, and stability; all while keeping packages up to date.
+## About AcreetionOS
+
+AcreetionOS Linux is a community-driven, lightweight, and versatile distribution. It is currently **based on Arch Linux**, with the long-term goal of becoming a parallel\* distribution with its own base. The focus is simplicity, ease of use, stability, and up-to-date packages.
+
+Unlike vanilla Arch, AcreetionOS does not consume the upstream Arch repositories at runtime. Instead it ships **self-managed repositories** hosted at `iso.acreetionos.org:8448` (`[acreetionOSREPO-main]`, `[personal]`). Curating the package set ourselves is how we offer end users a more stable, predictable experience on top of an Arch-style rolling base.
+
+## About this edition (XLibre)
+
+This edition uses **XLibre** — a 2025 fork of `xorg-server` started by Enrico Weigelt, who was xorg-server's most active contributor through 2024 before his merge requests stopped being accepted upstream and his Freedesktop GitLab account was blocked. XLibre positions itself as the continuation of active X11 development, as a deliberate alternative to Wayland, and ships features such as the `Xnamespace` extension for isolating X11 clients between security domains (e.g. containers).
+
+The package swap from the standard X.Org edition:
+
+| Standard (X11) | XLibre edition |
+| --- | --- |
+| `xorg-server` | `xlibre-xserver` |
+| `xorg-server-common` | `xlibre-xserver-common` |
+| `xf86-video-amdgpu` / `intel` / `nouveau` | `xlibre-video-amdgpu` / `intel` / `nouveau` |
+| `xf86-input-libinput` | `xlibre-input-libinput` |
+
+The ISO is labeled `AcreetionOS_XL` to distinguish it from the standard build.
+
+Why pick this edition:
+
+- You want a still-actively-developed X11 server with new features and ongoing patches.
+- You're interested in `Xnamespace` and other XLibre-specific capabilities.
+- You want to support the XLibre project.
+
+Pick a different edition if:
+
+- You need the most broadly-tested X11 stack — go with the **[X11 edition](../X11/)**.
+- You want the modern, secure, per-frame-perfect display protocol — the **[Wayland edition](../Wayland/)** is reserved for that (not yet released).
 
 ## Features
 
-- Lightweight base system
-- Standardized Package Selection
-- User-friendly installation process
-- x86_64 friendly.
+- Lightweight Arch-based system with the Cinnamon desktop
+- XLibre display server in place of X.Org
+- Curated package set from AcreetionOS's own repositories
+- Calamares graphical installer
+- Both BIOS (SYSLINUX) and UEFI ia32/x64 (GRUB) boot support
+- x86_64
 
-## Getting Started
+## Getting Started (End Users)
 
-To get started with AcreetionOS Linux, you can:
+1. Download the XLibre ISO (`AcreetionOS_XL_*.iso`) from <https://acreetionos.org>.
+2. Write it to a USB drive with [Etcher](https://etcher.balena.io/#download-etcher), [Rufus](https://rufus.ie/en/), or [Ventoy](https://ventoy.net/en/index.html).
+3. Boot from USB and follow the on-screen installation steps.
 
-1. Download the latest ISO from our [Website](https://acreetionos.org)!
-2. Create a bootable USB drive using tools like [Etcher]("https://etcher.balena.io/#download-etcher"), [Rufus]("https://rufus.ie/en/"), or [Ventoy]("https://ventoy.net/en/index.html").
-3. Boot from the USB drive and follow the installation instructions
+> **Ventoy users:** you must use **GRUB Mode 2**. Plain GRUB will not boot the ISO correctly.
 
-*     Ventoy MUST use GRUB MODE 2, if you use grub by its self will not boot correctly if at all.*
+## Building the ISO yourself
+
+This repository **is** an `archiso` profile. Build it on an Arch (or AcreetionOS) host with `archiso` installed:
+
+```bash
+./build.sh           # refreshes work/, runs mkarchiso, cleans up
+# or, step by step:
+./refresh.sh         # rm -rf work/ out/
+./mkarchiso.sh       # runs mkarchiso with the AcreetionOS_XL label
+./umount.sh          # if a previous build left bind mounts in work/
+```
+
+The resulting ISO is written to `../ISO/`. Builds require sudo (loop devices for squashfs). The `xlibre-*` packages are pulled from the AcreetionOS repositories — they are not in upstream Arch.
+
+For deeper architectural notes (profile layout, `airootfs/`, file-permission gotchas, etc.) see [`CLAUDE.md`](./CLAUDE.md) in this directory, or [`../CLAUDE.md`](../CLAUDE.md) for the workspace-level overview.
+
 ## Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guide]("https://github.com/AcreetionOS/AcreetionOSDocumentationPlan/blob/main/documentation/contributor-guide.md") file for guidelines on how to get involved.
+Contributions are welcome. See the [Contributor Guide](https://github.com/AcreetionOS/AcreetionOSDocumentationPlan/blob/main/documentation/contributor-guide.md). For bug reports and feature requests, [open an issue](https://github.com/cobra3282000/acreetionos/issues).
+
+To learn more about XLibre upstream, see <https://x11libre.net/>.
 
 ## Roadmap
 
-Our current goal is to release a stable distribution by the end of 2026. Check out our [project road map](https://github.com/cobra3282000/acreetionos/projects) for more details on upcoming features and milestones.
+The current goal is a stable AcreetionOS release by the end of 2026. Track progress on the [project roadmap](https://github.com/cobra3282000/acreetionos/projects).
 
 ## Project Information
 
-- **Project Status:** In active development
+- **Status:** In active development
 - **License:** GPL-3.0
-- **Maintainers:** Darren Clift (@cobra3282000), Johnathan Spiva (@sprunglesongithub) or (@Sprungles)
+- **Maintainers:** Darren Clift (@cobra3282000), Natalie Spiva (@spivanatalie64)
 
+---
 
-## Contact
-
-For questions, suggestions, or support, please [open an issue](https://github.com/cobra3282000/acreetionos/issues) on our GitHub repository.
-
-Thank you for your interest in AcreetionOS Linux!
-
-
-## Definitions:
-
-*Parallel Distribution: A distribution similar to, but having a different goal and future goal set.
+\* *Parallel distribution: a distribution similar to, but with a different goal set than, its upstream.*
